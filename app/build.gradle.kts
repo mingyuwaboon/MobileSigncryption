@@ -42,9 +42,11 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
-
+    implementation(files("C:\\Users\\mingy\\AndroidStudioProjects\\FileSelecterApp\\import\\okhttp-4.9.3.jar"))
+    implementation(files("C:\\Users\\mingy\\AndroidStudioProjects\\FileSelecterApp\\import\\okio-3.4.0.jar"))
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
 
 }

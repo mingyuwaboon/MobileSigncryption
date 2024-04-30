@@ -6,7 +6,8 @@ class Header {
         var COUNTHID = 0
     }
 
-    internal fun encapsulation(Ciphertext: ByteArray,Key: ByteArray): ByteArray? {
+    //GenDATA
+    fun GenerateDATA(Ciphertext: ByteArray, Key: ByteArray): ByteArray {
         val KeySize = Key.size
         val splitIndex = KeySize / 2
         val FrontKey = Key.copyOfRange(0, splitIndex)
@@ -14,28 +15,20 @@ class Header {
 
         val ConcatCipherKey = FrontKey + Ciphertext + TailKey
 
-        val Header = GenerateHeader(COUNTHID,KeySize)
-
-        if(COUNTHID < 255){
-            COUNTHID += 1
-        } else {
-            COUNTHID = 0
-        }
-
-        val SendData = Header?.plus(ConcatCipherKey)
-
-        return SendData
+        return ConcatCipherKey
     }
 
-    internal fun GenerateHeader(FID: Int,KeySize: Int): ByteArray? {
-        val StrHeader = PaddingToString(FID,KeySize)
+    //ConvertStr2Byte
+    internal fun HeaderStr2Byte(KeySize: Int): ByteArray? {
+        val StrHeader = GenHeader(KeySize)
 
         return StrHeader.toByteArray()
     }
 
-    fun PaddingToString(ID: Int,KeySize: Int): String {
+    //GenHeader
+    fun GenHeader(KeySize: Int): String {
 
-        var IDstr = ID.toString(16)
+        var IDstr = COUNTHID.toString(16)
         var Keystr = KeySize.toString(16)
 
         val PadTimeID = 2 - IDstr.length
@@ -51,6 +44,12 @@ class Header {
 
         val Hsize = "0C" // dec = 12
         val ConcatHeader = IDstr + Hsize + Keystr
+
+        if(COUNTHID < 255){
+            COUNTHID += 1
+        } else {
+            COUNTHID = 0
+        }
 
         return  ConcatHeader
 
