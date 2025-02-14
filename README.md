@@ -16,23 +16,23 @@ The primary goal of this project is to develop and optimize a lightweight, secur
 
 ## Key Features
 
-- Signcryption Mechanism: Combines encryption and digital signature in a single process to ensure confidentiality, integrity, and authentication.
+- **Signcryption Mechanism**: Combines encryption and digital signature in a single process to ensure confidentiality, integrity, and authentication.
 
-- Cloudlet Offloading: Shifts high-cost computations (e.g., hashing, encryption, and decryption) from mobile devices to a nearby cloudlet.
+- **Cloudlet Offloading**: Shifts high-cost computations (e.g., hashing, encryption, and decryption) from mobile devices to a nearby cloudlet.
 
-- Parallel Signcryption: Implements batch processing to handle multiple signcryption tasks concurrently.
+- **Parallel Signcryption**: Implements batch processing to handle multiple signcryption tasks concurrently.
 
-- Secure Transmission: Ensures secure communication between mobile devices and cloudlets with our new purposed protocal with header.
+- **Secure Transmission**: Ensures secure communication between mobile devices and cloudlets with our new purposed protocal with header.
 
-- Header & Mapping Algorithm: Manages the data transmission and computation mapping between mobile devices and cloudlets.
+- **Header & Mapping Algorithm**: Manages the data transmission and computation mapping between mobile devices and cloudlets.
 
 ## Technologies Used
 
-- Cryptographic Algorithms: OTP (One-time padding), RSA, ECC (Elliptic Curve Cryptography), and Hashing functions.
+- **Cryptographic Algorithms**: OTP (One-time padding), RSA, ECC (Elliptic Curve Cryptography), and Hashing functions.
 
-- Edge Computing (Cloudlet): Implements computation offloading techniques to improve performance.
+- **Edge Computing (Cloudlet)**: Implements computation offloading techniques to improve performance.
 
-- Mobile Application: Developed to integrate signcryption with cloudlet support.
+- **Mobile Application**: Developed to integrate signcryption with cloudlet support.
 
 ## Future Enhancements
 
